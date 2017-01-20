@@ -59,7 +59,9 @@
     "patternfly-bootstrap-treeview": "~2.1.0"
   },
   "scripts":{
-    "postinstall":"cp -fr node_modules/bootstrap-sass/assets/stylesheets/bootstrap assets/stylesheets/bootstrap && cp -fr node_modules/font-awesome/scss assets/stylesheets/font-awesome "
+    "copy:font-awesome": "cp -fr node_modules/font-awesome/scss assets/stylesheets/font-awesome",
+    "copy:bootstrap": "cp -fr node_modules/bootstrap-sass/assets/stylesheets/bootstrap assets/stylesheets/bootstrap",
+    "postinstall": "npm run copy:font-awesome & npm run copy:bootstrap"
   },
   "description": "Red Hat's Patternfly, converted to Sass and ready to drop into Rails",
   "repository": {
